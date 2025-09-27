@@ -8,11 +8,6 @@ spec:
   url: https://github.com/Raju7061/DevOps
   ref:
     branch: main
-  ignore: |
-    # exclude all
-    /*
-    # include clusters dir
-    !/clusters
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -20,10 +15,9 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 1m
   path: ./clusters/my-cluster
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-    namespace: flux-system

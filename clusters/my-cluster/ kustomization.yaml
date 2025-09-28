@@ -1,8 +1,13 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: my-cluster
+  name: my-app
   namespace: flux-system
-resources:
-  - flux-system
-  - ../../apps   # 👈 include apps here
+spec:
+  interval: 1m
+  path: ./clusters/apps/my-app
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  targetNamespace: my-app

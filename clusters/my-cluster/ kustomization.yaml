@@ -5,4 +5,4 @@ metadata:
   namespace: flux-system
 resources:
   - flux-system
-  - ../apps
+  - ../../apps   # 👈 include apps here

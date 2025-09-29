@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: devops-database
-  namespace: rs
+  namespace: database
 spec:
   selector:
     app: devops-database

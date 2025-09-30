@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-database
-  namespace: database
+  namespace: rs
 spec:
   replicas: 1
   selector:

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-backend
-  namespace: backend
+  namespace: rs
 spec:
   replicas: 1
   selector:

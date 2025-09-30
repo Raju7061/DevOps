@@ -5,4 +5,4 @@ metadata:
   namespace: backend
 data:
   PORT: "5000"
-  MONGO_URI: "mongodb://devops-database:27017/devopsstudy"
+  MONGO_URI: "mongodb://devops-database.database:27017/devopsstudy"
